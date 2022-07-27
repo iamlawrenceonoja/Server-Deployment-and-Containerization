@@ -61,6 +61,10 @@ def require_jwt(function):
 def health():
     return jsonify("Healthy")
 
+@APP.route('/myname', methods=['GET'])
+def my_name():
+    return jsonify("Lawrence")
+
 
 @APP.route('/auth', methods=['POST'])
 def auth():
